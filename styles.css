@@ -1,0 +1,81 @@
+[data-tab-content] {
+  display: none;
+}
+
+.active[data-tab-content] {
+  display: block;
+}
+
+
+.tabs {
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  border-bottom: 1px solid white;
+}
+
+.tab {
+  cursor: pointer;
+  padding: 10px;
+}
+
+.tab.active {
+  background-color: #619b8a;
+}
+
+.tab:hover {
+  background-color: #619B8A;
+}
+
+.tab-content {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+/* Style the body */
+body {
+  font-family: Arial;
+  margin: 0;
+  padding: 0;
+  background-color: #08253A;
+}
+
+/* Header/Logo Title */
+.header {
+  padding: 10px;
+  text-align: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("media/banner.jpg");
+  /*height:50%;*/
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  color: white;
+  font-size: 15px;
+}
+
+/* Page Content */
+.content {padding:20px;}
+
+
+h1 {text-align: center;}
+p {text-align: center;}
+div {text-align: center;}
+
+#myDiv {
+  border: 2px solid #A8DFFD;
+  padding: 5px;
+  max-width: 800px;
+  margin: auto;			  
+  color:#E7F5FE;
+}
+
+
+
+img{
+  max-width: 100%;
+  max-height: 100%;
+  display: block; 
+}
