@@ -81,6 +81,13 @@
 			<a href="https://www.linkedin.com/in/zeul-mordasiewicz-8133561b9/"><font color="#1187FC">LinkedIn</font></a>
 			<br>	
 			<br>
+
+			<b>My GitHub:</b> <br>
+			<a href="https://github.com/Zeulewan"><font color="#1187FC">GitHub</font></a>
+			<br>	
+			<br>
+			
+
 			</div>
 
 
@@ -90,7 +97,7 @@
 
 			<div id="myDiv">
      			Hi my name is Zeul, I'm 19, and I thought it would be fun to make a website. This website is fully self hosted 
-			and coded. I am an aerospace engineering student at TMU (Toronto Metropolitan University formerly Ryerson).<br><br>
+			and coded is available <a href="https://github.com/Zeulewan/zeulewan.com"><font color="#1187FC">here</font></a>. I am an aerospace engineering student at TMU (Toronto Metropolitan University formerly Ryerson).<br><br>
 			<img src="media/portrait.jpg" alt="image not found">
 
 			
