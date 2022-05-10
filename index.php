@@ -188,16 +188,6 @@
 										}
 
 
-
-
-
-
-
-
-
-
-
-
 									$pagecontents = file_get_contents("blog/$i/$j/$k/$k.html");
 									jpg("1", "$pagecontents", "$i", "$j", "$k");
 								
@@ -210,10 +200,10 @@
 					function jpg($l,$pc,$a,$b,$c)
 					{
 						
-						$x = str_replace("$l.jpg", "<br><br><img src='blog/$a/$b/$c/$l.jpg' alt='image not found'>", $pc);
-						$y = str_replace("$l.JPG", "<br><br><img src='blog/$a/$b/$c/$l.JPG' alt='image not found'>", $x);
-						$z = str_replace("$l.png", "<br><br><img src='blog/$a/$b/$c/$l.png' alt='image not found'>", $y);	
-						$q = str_replace("$l.jpeg", "<br><br><img src='blog/$a/$b/$c/$l.jpeg' alt='image not found'>", $z);	
+						$x = str_replace("$l.jpg", "<br><br><img src='blog/$a/$b/$c/$l.jpg' alt='image not found'><br>", $pc);
+						$y = str_replace("$l.JPG", "<br><br><img src='blog/$a/$b/$c/$l.JPG' alt='image not found'><br>", $x);
+						$z = str_replace("$l.png", "<br><br><img src='blog/$a/$b/$c/$l.png' alt='image not found'><br>", $y);	
+						$q = str_replace("$l.jpeg", "<br><br><img src='blog/$a/$b/$c/$l.jpeg' alt='image not found'><br>", $z);	
 
 						if($l<5){	
 							jpg($l+1,$q,$a,$b,$c);
@@ -240,8 +230,9 @@
 
    		<div id="links" data-tab-content>
  			<h1>Here are some links to things.</h1>
+			
+			
 			<div id="myDiv">
-			<br>
 			
 			<b>Stream my music:</b> <br>
 			<a href="https://linktr.ee/zeul"><font color="#1187FC">Linktree</font></a>
@@ -270,6 +261,10 @@
 			<br>	
 			<br>
 			
+			<b>Site I use to compress all my images</b> <br>
+			<a href="https://imagecompressor.com/"><font color="#1187FC">imagecompressor.com</font></a>
+				
+					
 
 			</div>
 
