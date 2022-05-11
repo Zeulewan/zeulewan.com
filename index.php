@@ -6,6 +6,7 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<script 
 		src="script.js" defer>
+
 	</script>
 	<link href="styles.css" rel="stylesheet">
  	<title>Zeul's Website!</title>
@@ -39,13 +40,13 @@
 				<h4>This is where I'll post some of the things I do throughout the summer</h4><br>
 			
 				<?php 
-					for ($i=2022; $i>=2022; $i--) 
+					for ($i=2025; $i>=2022; $i--) 
 					{
 						for ($j=12; $j>=1; $j--) 
 						{
 							for ($k=31; $k>= 1; $k--) 
 							{		
-								$pagecontents = file_get_contents("blog/$i/$j/$k/$k.html");
+								$pagecontents = file_get_contents("blog/raw/$i/$j/$k/$k.html");
 								if ($pagecontents!=null)
 								{
 									echo file_get_contents("format/a.html");
@@ -183,27 +184,33 @@
 												echo "<b>December ${k}th $i</b> <br>";
 											}
 											break;		
-									
-									
 										}
 
-
-									$pagecontents = file_get_contents("blog/$i/$j/$k/$k.html");
+									
+									$pagecontents = file_get_contents("blog/raw/$i/$j/$k/$k.html");
 									jpg("1", "$pagecontents", "$i", "$j", "$k");
 								
 									echo file_get_contents("format/b.html");
+
+									$post_counter++;
+									if ($post_counter>10){
+										break 3;
+									}
+
+
 								}
 							}
 						}
 					}
-	
+					
+
 					function jpg($l,$pc,$a,$b,$c)
 					{
 						
-						$x = str_replace("$l.jpg", "<br><br><img src='blog/$a/$b/$c/$l.jpg' alt='image not found'><br>", $pc);
-						$y = str_replace("$l.JPG", "<br><br><img src='blog/$a/$b/$c/$l.JPG' alt='image not found'><br>", $x);
-						$z = str_replace("$l.png", "<br><br><img src='blog/$a/$b/$c/$l.png' alt='image not found'><br>", $y);	
-						$q = str_replace("$l.jpeg", "<br><br><img src='blog/$a/$b/$c/$l.jpeg' alt='image not found'><br>", $z);	
+						$x = str_replace("$l.jpg", "<br><br><img src='blog/raw/$a/$b/$c/$l.jpg' alt='image not found'><br>", $pc);
+						$y = str_replace("$l.JPG", "<br><br><img src='blog/raw/$a/$b/$c/$l.JPG' alt='image not found'><br>", $x);
+						$z = str_replace("$l.png", "<br><br><img src='blog/raw/$a/$b/$c/$l.png' alt='image not found'><br>", $y);	
+						$q = str_replace("$l.jpeg", "<br><br><img src='blog/raw/$a/$b/$c/$l.jpeg' alt='image not found'><br>", $z);	
 
 						if($l<5){	
 							jpg($l+1,$q,$a,$b,$c);
@@ -215,6 +222,15 @@
 					}
 				?>
 
+
+					
+				<b>Blog Archive: <br>2022<b><br>
+				
+
+				<button onclick="location.href='blog/archive/5.php'">May</button>
+
+
+
 			</div>
 
 
@@ -223,6 +239,11 @@
 		<div id="thoughts" data-tab-content>
 			<h1>This will be a place to put my thoughts on random things</h1>
 			To do: <br>1. make folders for this section. 2. seperate text files for each blog post. 
+
+			
+
+
+
 		</div>
 
 
@@ -275,7 +296,7 @@
 
 			<div id="myDiv">
      			Hi my name is Zeul, I'm 19, and I thought it would be fun to make a website. This website is fully self hosted 
-			and coded is available <a href="https://github.com/Zeulewan/zeulewan.com"><font color="#1187FC">here</font></a>. I am an aerospace engineering student at TMU (Toronto Metropolitan University formerly Ryerson).<br><br>
+			and coded and is available <a href="https://github.com/Zeulewan/zeulewan.com"><font color="#1187FC">here</font></a>. I am an aerospace engineering student at TMU (Toronto Metropolitan University formerly Ryerson).<br><br>
 			<img src="media/portrait.jpg" alt="image not found">
 
 			
