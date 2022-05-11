@@ -224,7 +224,7 @@
 
 
 					
-				<b>Blog Archive: <br>2022<b><br>
+				<b>Blog Archive: <br>2022</b><br>
 				
 
 				<button onclick="location.href='blog/archive/5.php'">May</button>
