@@ -21,7 +21,7 @@
 
   	<ul class="tabs">
 		<li data-tab-target="#home" class="active tab"><font color ="FFFFFF">Blog</font></li>
-	<!--	<li data-tab-target="#thoughts"    class="tab"><font color ="FFFFFF">Thoughts</font></li>-->
+		<li data-tab-target="#thoughts"    class="tab"><font color ="FFFFFF">Thoughts</font></li>
 		<li data-tab-target="#links"        class="tab"><font color="FFFFFF">Links</font></li>
 		<li data-tab-target="#something"    class="tab"><font color="FFFFFF">About me</font></li>
   	</ul>
@@ -275,9 +275,20 @@
 
 		<div id="thoughts" data-tab-content>
 			<h1>This will be a place to put my thoughts on random things</h1>
-			To do: <br>1. make folders for this section. 2. seperate text files for each blog post. 
+			<?php 
 
-			
+
+				//ITERATE THOUGH FILES AND GET TITLE OF FILE
+
+			$f = fopen("thoughts/data/2022/5/13/testing.html", 'r');
+			$line = fgets($f);
+			fclose($f);
+
+
+			echo("<button onclick= \"location.href='thoughts/archive/2022/5/13/testing.php'\">$line</button>");
+			?>
+
+
 
 
 
