@@ -21,11 +21,12 @@
 
   	<ul class="tabs">
 		<li data-tab-target="#home" class="active tab"><font color ="FFFFFF">Blog</font></li>
-		<li data-tab-target="#thoughts"    class="tab"><font color ="FFFFFF">Thoughts</font></li>
+	<!--	<li data-tab-target="#thoughts"    class="tab"><font color ="FFFFFF">Thoughts</font></li>-->
 		<li data-tab-target="#links"        class="tab"><font color="FFFFFF">Links</font></li>
 		<li data-tab-target="#something"    class="tab"><font color="FFFFFF">About me</font></li>
   	</ul>
 
+	  
 
 
 
@@ -40,155 +41,155 @@
 				<h4>This is where I'll post some of the things I do throughout the summer</h4><br>
 			
 				<?php 
-					for ($i=2025; $i>=2022; $i--) 
+					for ($year=date("Y"); $year>=2022; $year--) 
 					{
-						for ($j=12; $j>=1; $j--) 
+						for ($month=12; $month>=1; $month--) 
 						{
-							for ($k=31; $k>= 1; $k--) 
+							for ($day=31; $day>= 1; $day--) 
 							{		
-								$pagecontents = file_get_contents("blog/raw/$i/$j/$k/$k.html");
+								$pagecontents = file_get_contents("blog/data/$year/$month/$day/$day.html");
 								if ($pagecontents!=null)
 								{
 									echo file_get_contents("format/a.html");
 
-									switch ($j) {
+									switch ($month) {
 										case 1:
-											if ($k==1){
-												echo "<b>January ${k}st $i</b> <br>";
-											} else if ($k==2){
-												echo "<b>January ${k}nd $i</b> <br>";
-											} else if ($k==3){
-												echo "<b>January ${k}rd $i</b> <br>";
+											if ($day==1){
+												echo "<b>January ${day}st $year</b> <br>";
+											} else if ($day==2){
+												echo "<b>January ${day}nd $year</b> <br>";
+											} else if ($day==3){
+												echo "<b>January ${day}rd $year</b> <br>";
 											} else{
-												echo "<b>January ${k}th $i</b> <br>";
+												echo "<b>January ${day}th $year</b> <br>";
 											}
 											break;
 										case 2:
-											if ($k==1){
-												echo "<b>February ${k}st $i</b> <br>";
-											} else if ($k==2){
-												echo "<b>February ${k}nd $i</b> <br>";
-											} else if ($k==3){
-												echo "<b>February ${k}rd $i</b> <br>";
+											if ($day==1){
+												echo "<b>February ${day}st $year</b> <br>";
+											} else if ($day==2){
+												echo "<b>February ${day}nd $year</b> <br>";
+											} else if ($day==3){
+												echo "<b>February ${day}rd $year</b> <br>";
 											} else{
-												echo "<b>February ${k}th $i</b> <br>";
+												echo "<b>February ${day}th $year</b> <br>";
 											}
 											break;
 										case 3:
-											if ($k==1){
-												echo "<b>March ${k}st $i</b> <br>";
-											} else if ($k==2){
-												echo "<b>March ${k}nd $i</b> <br>";
-											} else if ($k==3){
-												echo "<b>March ${k}rd $i</b> <br>";
+											if ($day==1){
+												echo "<b>March ${day}st $year</b> <br>";
+											} else if ($day==2){
+												echo "<b>March ${day}nd $year</b> <br>";
+											} else if ($day==3){
+												echo "<b>March ${day}rd $year</b> <br>";
 											} else{
-												echo "<b>March ${k}th $i</b> <br>";
+												echo "<b>March ${day}th $year</b> <br>";
 											}
 											break;
 										case 4:
-											if ($k==1){
-												echo "<b>April ${k}st $i</b> <br>";
-											} else if ($k==2){
-												echo "<b>April ${k}nd $i</b> <br>";
-											} else if ($k==3){
-												echo "<b>April ${k}rd $i</b> <br>";
+											if ($day==1){
+												echo "<b>April ${day}st $year</b> <br>";
+											} else if ($day==2){
+												echo "<b>April ${day}nd $year</b> <br>";
+											} else if ($day==3){
+												echo "<b>April ${day}rd $year</b> <br>";
 											} else{
-												echo "<b>April ${k}th $i</b> <br>";
+												echo "<b>April ${day}th $year</b> <br>";
 											}
 											break;
 										case 5:
-											if ($k==1){
-												echo "<b>May ${k}st $i</b> <br>";
-											} else if ($k==2){
-												echo "<b>May ${k}nd $i</b> <br>";
-											} else if ($k==3){
-												echo "<b>May ${k}rd $i</b> <br>";
+											if ($day==1){
+												echo "<b>May ${day}st $year</b> <br>";
+											} else if ($day==2){
+												echo "<b>May ${day}nd $year</b> <br>";
+											} else if ($day==3){
+												echo "<b>May ${day}rd $year</b> <br>";
 											} else{
-												echo "<b>May ${k}th $i</b> <br>";
+												echo "<b>May ${day}th $year</b> <br>";
 											}
 											break;
 										case 6:
-											if ($k==1){
-												echo "<b>June ${k}st $i</b> <br>";
-											} else if ($k==2){
-												echo "<b>June ${k}nd $i</b> <br>";
-											} else if ($k==3){
-												echo "<b>June ${k}rd $i</b> <br>";
+											if ($day==1){
+												echo "<b>June ${day}st $year</b> <br>";
+											} else if ($day==2){
+												echo "<b>June ${day}nd $year</b> <br>";
+											} else if ($day==3){
+												echo "<b>June ${day}rd $year</b> <br>";
 											} else{
-												echo "<b>June ${k}th $i</b> <br>";
+												echo "<b>June ${day}th $year</b> <br>";
 											}
 											break;
 										case 7:
-											if ($k==1){
-												echo "<b>July ${k}st $i</b> <br>";
-											} else if ($k==2){
-												echo "<b>July ${k}nd $i</b> <br>";
-											} else if ($k==3){
-												echo "<b>July ${k}rd $i</b> <br>";
+											if ($day==1){
+												echo "<b>July ${day}st $year</b> <br>";
+											} else if ($day==2){
+												echo "<b>July ${day}nd $year</b> <br>";
+											} else if ($day==3){
+												echo "<b>July ${day}rd $year</b> <br>";
 											} else{
-												echo "<b>July ${k}th $i</b> <br>";
+												echo "<b>July ${day}th $year</b> <br>";
 											}
 											break;	
 										case 8:
-											if ($k==1){
-												echo "<b>August ${k}st $i</b> <br>";
-											} else if ($k==2){
-												echo "<b>August ${k}nd $i</b> <br>";
-											} else if ($k==3){
-												echo "<b>August ${k}rd $i</b> <br>";
+											if ($day==1){
+												echo "<b>August ${day}st $year</b> <br>";
+											} else if ($day==2){
+												echo "<b>August ${day}nd $year</b> <br>";
+											} else if ($day==3){
+												echo "<b>August ${day}rd $year</b> <br>";
 											} else{
-												echo "<b>August ${k}th $i</b> <br>";
+												echo "<b>August ${day}th $year</b> <br>";
 											}
 											break;									
 										case 9:
-											if ($k==1){
-												echo "<b>September ${k}st $i</b> <br>";
-											} else if ($k==2){
-												echo "<b>September ${k}nd $i</b> <br>";
-											} else if ($k==3){
-												echo "<b>September ${k}rd $i</b> <br>";
+											if ($day==1){
+												echo "<b>September ${day}st $year</b> <br>";
+											} else if ($day==2){
+												echo "<b>September ${day}nd $year</b> <br>";
+											} else if ($day==3){
+												echo "<b>September ${day}rd $year</b> <br>";
 											} else{
-												echo "<b>September ${k}th $i</b> <br>";
+												echo "<b>September ${day}th $year</b> <br>";
 											}
 											break;
 										case 10:
-											if ($k==1){
-												echo "<b>October ${k}st $i</b> <br>";
-											} else if ($k==2){
-												echo "<b>October ${k}nd $i</b> <br>";
-											} else if ($k==3){
-												echo "<b>October ${k}rd $i</b> <br>";
+											if ($day==1){
+												echo "<b>October ${day}st $year</b> <br>";
+											} else if ($day==2){
+												echo "<b>October ${day}nd $year</b> <br>";
+											} else if ($day==3){
+												echo "<b>October ${day}rd $year</b> <br>";
 											} else{
-												echo "<b>October ${k}th $i</b> <br>";
+												echo "<b>October ${day}th $year</b> <br>";
 											}
 											break;
 										case 11:
-											if ($k==1){
-												echo "<b>November ${k}st $i</b> <br>";
-											} else if ($k==2){
-												echo "<b>November ${k}nd $i</b> <br>";
-											} else if ($k==3){
-												echo "<b>November ${k}rd $i</b> <br>";
+											if ($day==1){
+												echo "<b>November ${day}st $year</b> <br>";
+											} else if ($day==2){
+												echo "<b>November ${day}nd $year</b> <br>";
+											} else if ($day==3){
+												echo "<b>November ${day}rd $year</b> <br>";
 											} else{
-												echo "<b>November ${k}th $i</b> <br>";
+												echo "<b>November ${day}th $year</b> <br>";
 											}
 											break;
 										case 12:
-											if ($k==1){
-												echo "<b>December ${k}st $i</b> <br>";
-											} else if ($k==2){
-												echo "<b>December ${k}nd $i</b> <br>";
-											} else if ($k==3){
-												echo "<b>December ${k}rd $i</b> <br>";
+											if ($day==1){
+												echo "<b>December ${day}st $year</b> <br>";
+											} else if ($day==2){
+												echo "<b>December ${day}nd $year</b> <br>";
+											} else if ($day==3){
+												echo "<b>December ${day}rd $year</b> <br>";
 											} else{
-												echo "<b>December ${k}th $i</b> <br>";
+												echo "<b>December ${day}th $year</b> <br>";
 											}
 											break;		
 										}
 
 									
-									$pagecontents = file_get_contents("blog/raw/$i/$j/$k/$k.html");
-									jpg("1", "$pagecontents", "$i", "$j", "$k");
+									$pagecontents = file_get_contents("blog/data/$year/$month/$day/$day.html");
+									jpg("1", "$pagecontents", "$year", "$month", "$day");
 								
 									echo file_get_contents("format/b.html");
 
@@ -207,10 +208,10 @@
 					function jpg($l,$pc,$a,$b,$c)
 					{
 						
-						$x = str_replace("$l.jpg", "<br><br><img src='blog/raw/$a/$b/$c/$l.jpg' alt='image not found'><br>", $pc);
-						$y = str_replace("$l.JPG", "<br><br><img src='blog/raw/$a/$b/$c/$l.JPG' alt='image not found'><br>", $x);
-						$z = str_replace("$l.png", "<br><br><img src='blog/raw/$a/$b/$c/$l.png' alt='image not found'><br>", $y);	
-						$q = str_replace("$l.jpeg", "<br><br><img src='blog/raw/$a/$b/$c/$l.jpeg' alt='image not found'><br>", $z);	
+						$x = str_replace("$l.jpg", "<br><br><img src='blog/data/$a/$b/$c/$l.jpg' alt='image not found'><br>", $pc);
+						$y = str_replace("$l.JPG", "<br><br><img src='blog/data/$a/$b/$c/$l.JPG' alt='image not found'><br>", $x);
+						$z = str_replace("$l.png", "<br><br><img src='blog/data/$a/$b/$c/$l.png' alt='image not found'><br>", $y);	
+						$q = str_replace("$l.jpeg", "<br><br><img src='blog/data/$a/$b/$c/$l.jpeg' alt='image not found'><br>", $z);	
 
 						if($l<5){	
 							jpg($l+1,$q,$a,$b,$c);
@@ -223,15 +224,51 @@
 				?>
 
 
-					
-				<b>Blog Archive: <br>2022</b><br>
+<br><br><br>
+<div id="myDiv">
+						
+				<b>Blog Archive:</b>
+				<br>
+				<br>	
 				
-
-				<button onclick="location.href='blog/archive/5.php'">May</button>
-
-
-
+			<?php 	
+				for ($year=date("Y"); $year>=2022; $year--) 
+				{	
+					if (is_dir("blog/data/$year"))
+					{
+						if (!is_dir("blog/archive/$year"))
+						{
+							mkdir("blog/archive/$year", 0777, true);
+							chmod("blog/archive/$year", 0777);
+						}
+						echo "$year <br>";
+						for ($month=12; $month>=1; $month--) 
+						{
+							if (is_dir("blog/data/$year/$month"))
+								{
+									
+									$tmplt = file_get_contents("blog/archive/template.php");
+									$newfile = fopen("blog/archive/$year/$month.php","w") or die("Unable to open file!");
+									chmod("blog/archive/$year/$month.php", 0777);
+									fwrite($newfile, $tmplt);
+									fclose($newfile);
+									echo("<button onclick= \"location.href='blog/archive/2022/$month.php'\">May</button>");
+								}
+						}
+						echo("<br>");
+					}
+						
+				}
+				?>
 			</div>
+		</div>
+
+
+
+
+
+
+
 
 
 
@@ -245,6 +282,17 @@
 
 
 		</div>
+
+
+
+
+
+
+
+
+
+
+
 
 
 
