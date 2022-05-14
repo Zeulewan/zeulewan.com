@@ -47,7 +47,7 @@
 						{
 							for ($day=31; $day>= 1; $day--) 
 							{		
-								$pagecontents = file_get_contents("blog/data/$year/$month/$day/$day.html");
+								$pagecontents = file_get_contents("blog/data/$year/$month/$day/$day.txt");
 								if ($pagecontents!=null)
 								{
 									echo file_get_contents("format/a.html");
@@ -188,7 +188,7 @@
 										}
 
 									
-									$pagecontents = file_get_contents("blog/data/$year/$month/$day/$day.html");
+									$pagecontents = file_get_contents("blog/data/$year/$month/$day/$day.txt");
 									jpg("1", "$pagecontents", "$year", "$month", "$day");
 								
 									echo file_get_contents("format/b.html");
@@ -267,28 +267,79 @@
 
 
 
-
-
-
-
-
-
 		<div id="thoughts" data-tab-content>
-			<h1>This will be a place to put my thoughts on random things</h1>
+			<h1>This is a place to put my thoughts on random things</h1>
 			<?php 
 
 
 				//ITERATE THOUGH FILES AND GET TITLE OF FILE
 
-			$f = fopen("thoughts/data/2022/5/13/testing.html", 'r');
-			$line = fgets($f);
-			fclose($f);
+			
 
 
-			echo("<button onclick= \"location.href='thoughts/archive/2022/5/13/testing.php'\">$line</button>");
+
+				for ($year=date("Y"); $year>=2022; $year--) 
+				{	
+					if (is_dir("thoughts/data/$year"))
+					{
+						if (!is_dir("thoughts/archive/$year"))
+						{
+							mkdir("thoughts/archive/$year", 0777, true);
+							chmod("thoughts/archive/$year", 0777);
+						}
+						
+						
+						for ($month=12; $month>=1; $month--) 
+						{							
+							if (is_dir("thoughts/data/$year/$month"))
+							{
+								if (!is_dir("thoughts/archive/$year/$month"))
+								{
+									mkdir("thoughts/archive/$year/$month", 0777, true);
+									chmod("thoughts/archive/$year/$month", 0777);
+								}
+
+
+								for ($day=31; $day>= 1; $day--) 
+								{
+									if (is_dir("thoughts/data/$year/$month/$day"))
+									{
+
+										if (!is_dir("thoughts/archive/$year/$month/$day"))
+										{
+											mkdir("thoughts/archive/$year/$month/$day", 0777, true);
+											chmod("thoughts/archive/$year/$month/$day", 0777);
+										}
+
+
+										foreach(glob("thoughts/data/$year/$month/$day/*.txt") as $file) 
+										{	
+											$bname = null;
+											$bname = basename($file, ".txt");
+										
+										}
+
+										$tmplt = file_get_contents("thoughts/archive/template.php");
+										$newfile = fopen("thoughts/archive/$year/$month/$day/$bname.php","w") or die("Unable to open file!");
+										chmod("thoughts/archive/$year/$month/$day/$bname.php", 0777);
+										fwrite($newfile, $tmplt);
+										fclose($newfile);
+									
+										$f = fopen("thoughts/data/$year/$month/$day/$bname.txt", 'r');
+										$line1 = fgets($f);
+										fclose($f);
+										echo("<button onclick= \"location.href='thoughts/archive/2022/$month/$day/$bname.php'\">$line1</button>");
+										echo("<br> <br>");
+									}
+								}
+							}	
+						}
+					}				
+				}
+
+
+			
 			?>
-
-
 
 
 
