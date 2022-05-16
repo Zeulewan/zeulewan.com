@@ -11,8 +11,8 @@
   display: flex;
   justify-content: space-around;
   list-style-type: none;
-  margin: 0;
-  padding: 0;
+  margin: 0px;
+  padding: 10px;
   border-bottom: 1px solid white;
 }
 
@@ -22,11 +22,13 @@
 }
 
 .tab.active {
-  background-color: #619b8a;
+  background-color: #194360;
+  border-radius: 10px;
 }
 
 .tab:hover {
-  background-color: #619B8A;
+  background-color: #194360;
+  border-radius: 10px;
 }
 
 .tab-content {
@@ -57,15 +59,39 @@ body {
 }
 
 /* Page Content */
-.content {padding:20px;}
+.content {padding:0px;}
 
 
-h1 {text-align: center;}
-p {text-align: center;}
+h1 {text-align: center;
+  color:#E7F5FE;
+}
+
+p {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+
+}
 div {text-align: center;}
 
-#myDiv {
-  border: 2px solid #A8DFFD;
+#blog {
+  border: 2px solid #194360;
+  border-radius: 10px;
+  background: #194360;
+  padding: 20px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  max-width: 800px;
+  margin: auto;			  
+  color:#E7F5FE;
+}
+
+#otherformat {
+  border: 2px solid #194360;
+  border-radius: 10px;
+  background: #194360;
   padding: 20px;
   max-width: 800px;
   margin: auto;			  
@@ -73,9 +99,11 @@ div {text-align: center;}
 }
 
 
-
 img{
   max-width: 100%;
   max-height: 100%;
   display: block; 
+  margin-bottom: 0px;
+  margin-top: 0px;
+  border-radius: 10px;
 }

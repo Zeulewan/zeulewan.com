@@ -50,15 +50,25 @@
 								$pagecontents = file_get_contents("blog/data/$year/$month/$day/$day.txt");
 								if ($pagecontents!=null)
 								{
-									echo file_get_contents("format/a.html");
+									
+									echo ("<div id='blog'> <p>");
+											
+									
 
-									switch ($month) {
+									switch ($month) 
+									{
 										case 1:
 											if ($day==1){
 												echo "<b>January ${day}st $year</b> <br>";
 											} else if ($day==2){
 												echo "<b>January ${day}nd $year</b> <br>";
 											} else if ($day==3){
+												echo "<b>January ${day}rd $year</b> <br>";
+											} else if ($day==21){
+												echo "<b>January ${day}st $year</b> <br>";
+											} else if ($day==22){
+												echo "<b>January ${day}nd $year</b> <br>";
+											} else if ($day==23){
 												echo "<b>January ${day}rd $year</b> <br>";
 											} else{
 												echo "<b>January ${day}th $year</b> <br>";
@@ -71,6 +81,12 @@
 												echo "<b>February ${day}nd $year</b> <br>";
 											} else if ($day==3){
 												echo "<b>February ${day}rd $year</b> <br>";
+											} else if ($day==21){
+												echo "<b>February ${day}st $year</b> <br>";
+											} else if ($day==22){
+												echo "<b>February ${day}nd $year</b> <br>";
+											} else if ($day==23){
+												echo "<b>February ${day}rd $year</b> <br>";
 											} else{
 												echo "<b>February ${day}th $year</b> <br>";
 											}
@@ -81,6 +97,12 @@
 											} else if ($day==2){
 												echo "<b>March ${day}nd $year</b> <br>";
 											} else if ($day==3){
+												echo "<b>March ${day}rd $year</b> <br>";
+											} else if ($day==21){
+												echo "<b>March ${day}st $year</b> <br>";
+											} else if ($day==22){
+												echo "<b>March ${day}nd $year</b> <br>";
+											} else if ($day==23){
 												echo "<b>March ${day}rd $year</b> <br>";
 											} else{
 												echo "<b>March ${day}th $year</b> <br>";
@@ -93,7 +115,13 @@
 												echo "<b>April ${day}nd $year</b> <br>";
 											} else if ($day==3){
 												echo "<b>April ${day}rd $year</b> <br>";
-											} else{
+											} else if ($day==21){
+												echo "<b>April ${day}st $year</b> <br>";
+											} else if ($day==22){
+												echo "<b>April ${day}nd $year</b> <br>";
+											} else if ($day==23){
+												echo "<b>April ${day}rd $year</b> <br>";
+											}else{
 												echo "<b>April ${day}th $year</b> <br>";
 											}
 											break;
@@ -103,6 +131,12 @@
 											} else if ($day==2){
 												echo "<b>May ${day}nd $year</b> <br>";
 											} else if ($day==3){
+												echo "<b>May ${day}rd $year</b> <br>";
+											} else if ($day==21){
+												echo "<b>May ${day}st $year</b> <br>";
+											} else if ($day==22){
+												echo "<b>May ${day}nd $year</b> <br>";
+											} else if ($day==23){
 												echo "<b>May ${day}rd $year</b> <br>";
 											} else{
 												echo "<b>May ${day}th $year</b> <br>";
@@ -115,6 +149,12 @@
 												echo "<b>June ${day}nd $year</b> <br>";
 											} else if ($day==3){
 												echo "<b>June ${day}rd $year</b> <br>";
+											} else if ($day==21){
+												echo "<b>June ${day}st $year</b> <br>";
+											} else if ($day==22){
+												echo "<b>June ${day}nd $year</b> <br>";
+											} else if ($day==23){
+												echo "<b>June ${day}rd $year</b> <br>";
 											} else{
 												echo "<b>June ${day}th $year</b> <br>";
 											}
@@ -125,6 +165,12 @@
 											} else if ($day==2){
 												echo "<b>July ${day}nd $year</b> <br>";
 											} else if ($day==3){
+												echo "<b>July ${day}rd $year</b> <br>";
+											} else if ($day==21){
+												echo "<b>July ${day}st $year</b> <br>";
+											} else if ($day==22){
+												echo "<b>July ${day}nd $year</b> <br>";
+											} else if ($day==23){
 												echo "<b>July ${day}rd $year</b> <br>";
 											} else{
 												echo "<b>July ${day}th $year</b> <br>";
@@ -137,6 +183,12 @@
 												echo "<b>August ${day}nd $year</b> <br>";
 											} else if ($day==3){
 												echo "<b>August ${day}rd $year</b> <br>";
+											} else if ($day==21){
+												echo "<b>August ${day}st $year</b> <br>";
+											} else if ($day==22){
+												echo "<b>August ${day}nd $year</b> <br>";
+											} else if ($day==23){
+												echo "<b>August ${day}rd $year</b> <br>";
 											} else{
 												echo "<b>August ${day}th $year</b> <br>";
 											}
@@ -147,6 +199,12 @@
 											} else if ($day==2){
 												echo "<b>September ${day}nd $year</b> <br>";
 											} else if ($day==3){
+												echo "<b>September ${day}rd $year</b> <br>";
+											} else if ($day==21){
+												echo "<b>September ${day}st $year</b> <br>";
+											} else if ($day==22){
+												echo "<b>September ${day}nd $year</b> <br>";
+											} else if ($day==23){
 												echo "<b>September ${day}rd $year</b> <br>";
 											} else{
 												echo "<b>September ${day}th $year</b> <br>";
@@ -159,6 +217,12 @@
 												echo "<b>October ${day}nd $year</b> <br>";
 											} else if ($day==3){
 												echo "<b>October ${day}rd $year</b> <br>";
+											} else if ($day==21){
+												echo "<b>October ${day}st $year</b> <br>";
+											} else if ($day==22){
+												echo "<b>October ${day}nd $year</b> <br>";
+											} else if ($day==23){
+												echo "<b>October ${day}rd $year</b> <br>";
 											} else{
 												echo "<b>October ${day}th $year</b> <br>";
 											}
@@ -169,6 +233,12 @@
 											} else if ($day==2){
 												echo "<b>November ${day}nd $year</b> <br>";
 											} else if ($day==3){
+												echo "<b>November ${day}rd $year</b> <br>";
+											} else if ($day==21){
+												echo "<b>November ${day}st $year</b> <br>";
+											} else if ($day==22){
+												echo "<b>November ${day}nd $year</b> <br>";
+											} else if ($day==23){
 												echo "<b>November ${day}rd $year</b> <br>";
 											} else{
 												echo "<b>November ${day}th $year</b> <br>";
@@ -181,17 +251,25 @@
 												echo "<b>December ${day}nd $year</b> <br>";
 											} else if ($day==3){
 												echo "<b>December ${day}rd $year</b> <br>";
+											} else if ($day==21){
+												echo "<b>December ${day}st $year</b> <br>";
+											} else if ($day==22){
+												echo "<b>December ${day}nd $year</b> <br>";
+											} else if ($day==23){
+												echo "<b>December ${day}rd $year</b> <br>";
 											} else{
 												echo "<b>December ${day}th $year</b> <br>";
 											}
 											break;		
-										}
+									}
 
-									
+									echo ("</p> <p>");
+								
 									$pagecontents = file_get_contents("blog/data/$year/$month/$day/$day.txt");
 									jpg("1", "$pagecontents", "$year", "$month", "$day");
 								
-									echo file_get_contents("format/b.html");
+
+									echo ("</p> </div> <br>");
 
 									$post_counter++;
 									if ($post_counter>10){
@@ -208,10 +286,10 @@
 					function jpg($l,$pc,$a,$b,$c)
 					{
 						
-						$x = str_replace("$l.jpg", "<br><br><img src='blog/data/$a/$b/$c/$l.jpg' alt='image not found'><br>", $pc);
-						$y = str_replace("$l.JPG", "<br><br><img src='blog/data/$a/$b/$c/$l.JPG' alt='image not found'><br>", $x);
-						$z = str_replace("$l.png", "<br><br><img src='blog/data/$a/$b/$c/$l.png' alt='image not found'><br>", $y);	
-						$q = str_replace("$l.jpeg", "<br><br><img src='blog/data/$a/$b/$c/$l.jpeg' alt='image not found'><br>", $z);	
+						$x = str_replace("$l.jpg", "</p><img src='blog/data/$a/$b/$c/$l.jpg' alt='image not found'><p>", $pc);
+						$y = str_replace("$l.JPG", "</p><img src='blog/data/$a/$b/$c/$l.JPG' alt='image not found'><p>", $x);
+						$z = str_replace("$l.png", "</p><img src='blog/data/$a/$b/$c/$l.png' alt='image not found'><p>", $y);	
+						$q = str_replace("$l.jpeg", "</p><img src='blog/data/$a/$b/$c/$l.jpeg' alt='image not found'><p>", $z);	
 
 						if($l<5){	
 							jpg($l+1,$q,$a,$b,$c);
@@ -225,7 +303,7 @@
 
 
 <br><br><br>
-<div id="myDiv">
+<div id="otherformat">
 						
 				<b>Blog Archive:</b>
 				<br>
@@ -252,7 +330,7 @@
 									chmod("blog/archive/$year/$month.php", 0777);
 									fwrite($newfile, $tmplt);
 									fclose($newfile);
-									echo("<button onclick= \"location.href='blog/archive/2022/$month.php'\">May</button>");
+									echo("<button onclick= \"location.href='blog/archive/$year/$month.php'\">May</button>");
 								}
 						}
 						echo("<br>");
@@ -278,7 +356,7 @@
 
 
 
-				for ($year=date("Y"); $year>=2022; $year--) 
+				for ($year=date("Y"); $year>=2021; $year--) 
 				{	
 					if (is_dir("thoughts/data/$year"))
 					{
@@ -328,7 +406,7 @@
 										$f = fopen("thoughts/data/$year/$month/$day/$bname.txt", 'r');
 										$line1 = fgets($f);
 										fclose($f);
-										echo("<button onclick= \"location.href='thoughts/archive/2022/$month/$day/$bname.php'\">$line1</button>");
+										echo("<button onclick= \"location.href='thoughts/archive/$year/$month/$day/$bname.php'\">$line1</button>");
 										echo("<br> <br>");
 									}
 								}
@@ -363,7 +441,7 @@
  			<h1>Here are some links to things.</h1>
 			
 			
-			<div id="myDiv">
+			<div id="otherformat">
 			
 			<b>Stream my music:</b> <br>
 			<a href="https://linktr.ee/zeul"><font color="#1187FC">Linktree</font></a>
@@ -404,8 +482,8 @@
     		<div id="something" data-tab-content>	
       			<h1>About me</h1>
 
-			<div id="myDiv">
-     			Hi my name is Zeul, I'm 19, and I thought it would be fun to make a website. This website is fully self hosted 
+			<div id="otherformat">
+     			Hi my name is Zeul (full name Zeulewan), I'm 19, and I thought it would be fun to make a website. This website is fully self hosted 
 			and coded and is available <a href="https://github.com/Zeulewan/zeulewan.com"><font color="#1187FC">here</font></a>. I am an aerospace engineering student at TMU (Toronto Metropolitan University formerly Ryerson).<br><br>
 			<img src="media/portrait.jpg" alt="image not found">
 
