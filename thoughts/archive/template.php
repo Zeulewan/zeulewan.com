@@ -52,7 +52,7 @@
 
 
 
-                                    echo file_get_contents("../../../../../format/a.html");
+									echo ("<div id='blog'> <p>");
 
 									switch ($month) 
 									{
@@ -262,29 +262,30 @@
 											break;		
 										}
 
+									echo ("</p> <p>");
 									
 									$pagecontents = file_get_contents("../../../../data/$year/$month/$day/$title.txt");
-									
-                                    
-                                    jpg("1", "$pagecontents", "$year", "$month", "$day");
-								
-									echo file_get_contents("../../../../../format/b.html");
+									$newpc = str_replace("$line", "", $pagecontents);	
+                                    jpg("1", "$newpc", "$year", "$month", "$day");
+		
+									echo ("</p> </div> <br>");
 
 
                                     function jpg($l,$pc,$a,$b,$c)
                                     {
                                         
-                                        $x = str_replace("$l.jpg", "<br><br><img src='../../../../data/$a/$b/$c/$l.jpg' alt='image not found'><br>", $pc);
-                                        $y = str_replace("$l.JPG", "<br><br><img src='../../../../data/$a/$b/$c/$l.JPG' alt='image not found'><br>", $x);
-                                        $z = str_replace("$l.png", "<br><br><img src='../../../../data/$a/$b/$c/$l.png' alt='image not found'><br>", $y);	
-                                        $q = str_replace("$l.jpeg", "<br><br><img src='../../../../data/$a/$b/$c/$l.jpeg' alt='image not found'><br>", $z);	
+                                        $x = str_replace("$l.jpg", "</p><img src='../../../../data/$a/$b/$c/$l.jpg' alt='image not found'><p>", $pc);
+                                        $y = str_replace("$l.JPG", "</p><img src='../../../../data/$a/$b/$c/$l.JPG' alt='image not found'><p>", $x);
+                                        $z = str_replace("$l.png", "</p><img src='../../../../data/$a/$b/$c/$l.png' alt='image not found'><p>", $y);	
+                                        $q = str_replace("$l.jpeg", "</p><img src='../../../../data/$a/$b/$c/$l.jpeg' alt='image not found'><p>", $z);	
                 
+										
                                         if($l<5){	
                                             jpg($l+1,$q,$a,$b,$c);
                                         } 
                                         else 
                                         {	
-                                            echo $q;
+                                            echo ("$q");
                                         }
                                     }
 

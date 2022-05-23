@@ -4,6 +4,11 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="description" content="This is Zeul's website. On here you'll find his blog, random thoughts and various other things. 
+										This site is fully self hosted and coded">
+	
+	<meta name="author" content="Zeulewan Mordasiewicz">
+
 	<script 
 		src="script.js" defer>
 
@@ -303,7 +308,7 @@
 
 
 <br><br><br>
-<div id="otherformat">
+			<div id="otherformat">
 						
 				<b>Blog Archive:</b>
 				<br>
@@ -339,7 +344,7 @@
 				}
 				?>
 			</div>
-		</div>
+</div>
 
 
 
@@ -349,10 +354,6 @@
 			<h1>This is a place to put my thoughts on random things</h1>
 			<?php 
 
-
-				//ITERATE THOUGH FILES AND GET TITLE OF FILE
-
-			
 
 
 

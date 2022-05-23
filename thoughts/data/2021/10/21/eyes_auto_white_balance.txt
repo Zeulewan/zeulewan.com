@@ -1,4 +1,4 @@
-Eyes Auto White Balance
+Auto White Balance of the Eyes
 
 I know that it takes something like 16 minutes for our eyes to fully adjust from lightness 
 to darkness (which uncoincidentally is the same time that it takes for the sun to set).
