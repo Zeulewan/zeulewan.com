@@ -30,11 +30,12 @@
     ?>
 
 
-	<div class="header">
-  		<h1>Thought</h1>
-          <h2><?php echo $line?></h2><br>
+	<div class="banner">
+	<br>
+          <h1><?php echo $line?></h1>
+		  <br>
 	</div>
-
+	
    
 
 	<button onclick="location.href='../../../../../'">Go Back Home</button>
@@ -280,7 +281,7 @@
                                         $q = str_replace("$l.jpeg", "</p><img src='../../../../data/$a/$b/$c/$l.jpeg' alt='image not found'><p>", $z);	
                 
 										
-                                        if($l<5){	
+                                        if($l<10){	
                                             jpg($l+1,$q,$a,$b,$c);
                                         } 
                                         else 

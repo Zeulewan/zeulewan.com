@@ -2,9 +2,42 @@
   display: none;
 }
 
+
+
+
+.header {
+ 
+  display: flex;
+  justify-content: space-around;
+
+  list-style: none;
+
+  padding: 20px 10px;
+  
+  
+}
+
+
+@media screen and (max-width: 500px) {
+
+   .header {
+   
+    display: block;
+  
+ 
+  }
+
+}
+
+
+
+
+
 .active[data-tab-content] {
   display: block;
 }
+
+
 
 
 .tabs {
@@ -13,12 +46,15 @@
   list-style-type: none;
   margin: 0px;
   padding: 10px;
-  border-bottom: 1px solid white;
+  
+  
+  text-align: center;
 }
 
 .tab {
   cursor: pointer;
   padding: 10px;
+ 
 }
 
 .tab.active {
@@ -45,24 +81,39 @@ body {
 }
 
 /* Header/Logo Title */
-.header {
-  padding: 10px;
+.banner {
+  overflow: hidden;
+  
   text-align: center;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("media/banner.jpg");
-  /*height:50%;*/
+  
+  /*background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("media/banner.jpg");*/
+  background: linear-gradient(rgba(0, 0, 0, 0.5), #08253A), url("media/banner.jpg");
+
+
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-  color: white;
-  font-size: 15px;
+  
+
 }
 
 /* Page Content */
 .content {padding:0px;}
 
 
+
+
+
+
+
 h1 {text-align: center;
+  color:#E7F5FE;
+}
+
+
+h4{
+text-align: center;
   color:#E7F5FE;
 }
 
@@ -107,3 +158,6 @@ img{
   margin-top: 0px;
   border-radius: 10px;
 }
+
+
+

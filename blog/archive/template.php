@@ -14,9 +14,11 @@
 </head>
 <body>
 	
-	<div class="header">
+	<div class="banner">
+	<br>
   		<h1>Blog Archive</h1>
           <h4>(Chronological)</h4><br>
+		  <br>
 	</div>
     <button onclick="location.href='../../../'">Go Back Home</button>
 
@@ -199,7 +201,7 @@
 						$z = str_replace("$l.png", "</p><img src='../../data/$a/$b/$c/$l.png' alt='image not found'><p>", $y);	
 						$q = str_replace("$l.jpeg", "</p><img src='../../data/$a/$b/$c/$l.jpeg' alt='image not found'><p>", $z);	
 
-						if($l<5){	
+						if($l<10){	
 							jpg($l+1,$q,$a,$b,$c);
 						} 
 						else 

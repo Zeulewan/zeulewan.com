@@ -19,18 +19,22 @@
 </head>
 <body>
 	
-	<div class="header">
+	<div class="banner">
+	<br>
   		<h1>zeulewan.com</h1>
-	</div>
+	
 
 
-  	<ul class="tabs">
+  	<ul class="header">
 		<li data-tab-target="#home" class="active tab"><font color ="FFFFFF">Blog</font></li>
 		<li data-tab-target="#thoughts"    class="tab"><font color ="FFFFFF">Thoughts</font></li>
 		<li data-tab-target="#links"        class="tab"><font color="FFFFFF">Links</font></li>
 		<li data-tab-target="#something"    class="tab"><font color="FFFFFF">About me</font></li>
   	</ul>
 
+	
+
+	  </div>
 	  
 
 
@@ -42,7 +46,7 @@
     		<div id="home" data-tab-content class="active">
 		
 				<font face="Arial" color="#E7F5FE">
-				<h1>Zeul's Blog</h1>
+				<h1>My Blog</h1>
 				<h4>This is where I'll post some of the things I do throughout the summer</h4><br>
 			
 				<?php 
