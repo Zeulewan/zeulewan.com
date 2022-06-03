@@ -14,24 +14,75 @@
 </head>
 <body>
 	
+	<?php
+	$year = basename(dirname(__FILE__));
+	$month = basename(__FILE__, ".php");
+
+	switch ($month) 
+	{
+		case 1:
+			$monthtxt = ("January");
+			break;
+		case 2:
+			$monthtxt = ("Feburary");
+			break;
+		case 3:
+			$monthtxt = ("March");
+			break;
+		case 4:
+			$monthtxt = ("Arpil");
+			break;
+		case 5:
+			$monthtxt = ("May");
+			break;		
+		case 6:
+			$monthtxt = ("June");
+			break;	
+		case 7:
+			$monthtxt = ("July");
+			break;
+		case 8:
+			$monthtxt = ("August");
+			break;
+		case 9:
+			$monthtxt = ("September");
+			break;
+		case 10:
+			$monthtxt = ("October");
+			break;	
+		case 11:
+			$monthtxt = ("November");
+			break;		
+		case 12:
+			$monthtxt = ("December");
+			break;
+	}
+
+
+	?>
+
+
+
 	<div class="banner">
 	<br>
-  		<h1>Blog Archive</h1>
-          <h4>(Chronological)</h4><br>
+  		<h1><?php echo "$monthtxt $year"; ?></h1>
 		  <br>
 	</div>
-    <button onclick="location.href='../../../'">Go Back Home</button>
 
+	<div class="center">
+    <button class="button-10" onclick="location.href='../../../blogarchive.php'"     id="home"  >   Archive Menu    </button>
+	</div>
 
   	<div class="tab-content">
     		
 		
 				<font face="Arial" color="#E7F5FE">
 				<br>
+
+				<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 			
 				<?php 
-                    $year = basename(dirname(__FILE__));
-                    $month = basename(__FILE__, ".php");
+                    
 				
 
 
@@ -43,140 +94,213 @@
 								{
 									echo ("<div id='blog'> <p>");
 
-									switch ($month) {
+									switch ($month) 
+									{
 										case 1:
 											if ($day==1){
-												echo "<b>January ${day}st $year</b> <br>";
+												echo "<b>January ${day}st</b> <br>";
 											} else if ($day==2){
-												echo "<b>January ${day}nd $year</b> <br>";
+												echo "<b>January ${day}nd</b> <br>";
 											} else if ($day==3){
-												echo "<b>January ${day}rd $year</b> <br>";
+												echo "<b>January ${day}rd</b> <br>";
+											} else if ($day==21){
+												echo "<b>January ${day}st</b> <br>";
+											} else if ($day==22){
+												echo "<b>January ${day}nd</b> <br>";
+											} else if ($day==23){
+												echo "<b>January ${day}rd</b> <br>";
 											} else{
-												echo "<b>January ${day}th $year</b> <br>";
+												echo "<b>January ${day}th</b> <br>";
 											}
 											break;
 										case 2:
 											if ($day==1){
-												echo "<b>February ${day}st $year</b> <br>";
+												echo "<b>February ${day}st</b> <br>";
 											} else if ($day==2){
-												echo "<b>February ${day}nd $year</b> <br>";
+												echo "<b>February ${day}nd</b> <br>";
 											} else if ($day==3){
-												echo "<b>February ${day}rd $year</b> <br>";
+												echo "<b>February ${day}rd</b> <br>";
+											} else if ($day==21){
+												echo "<b>February ${day}st</b> <br>";
+											} else if ($day==22){
+												echo "<b>February ${day}nd</b> <br>";
+											} else if ($day==23){
+												echo "<b>February ${day}rd</b> <br>";
 											} else{
-												echo "<b>February ${day}th $year</b> <br>";
+												echo "<b>February ${day}th</b> <br>";
 											}
 											break;
 										case 3:
 											if ($day==1){
-												echo "<b>March ${day}st $year</b> <br>";
+												echo "<b>March ${day}st</b> <br>";
 											} else if ($day==2){
-												echo "<b>March ${day}nd $year</b> <br>";
+												echo "<b>March ${day}nd</b> <br>";
 											} else if ($day==3){
-												echo "<b>March ${day}rd $year</b> <br>";
+												echo "<b>March ${day}rd</b> <br>";
+											} else if ($day==21){
+												echo "<b>March ${day}st</b> <br>";
+											} else if ($day==22){
+												echo "<b>March ${day}nd</b> <br>";
+											} else if ($day==23){
+												echo "<b>March ${day}rd</b> <br>";
 											} else{
-												echo "<b>March ${day}th $year</b> <br>";
+												echo "<b>March ${day}th</b> <br>";
 											}
 											break;
 										case 4:
 											if ($day==1){
-												echo "<b>April ${day}st $year</b> <br>";
+												echo "<b>April ${day}st</b> <br>";
 											} else if ($day==2){
-												echo "<b>April ${day}nd $year</b> <br>";
+												echo "<b>April ${day}nd</b> <br>";
 											} else if ($day==3){
-												echo "<b>April ${day}rd $year</b> <br>";
-											} else{
-												echo "<b>April ${day}th $year</b> <br>";
+												echo "<b>April ${day}rd</b> <br>";
+											} else if ($day==21){
+												echo "<b>April ${day}st</b> <br>";
+											} else if ($day==22){
+												echo "<b>April ${day}nd</b> <br>";
+											} else if ($day==23){
+												echo "<b>April ${day}rd</b> <br>";
+											}else{
+												echo "<b>April ${day}th</b> <br>";
 											}
 											break;
 										case 5:
 											if ($day==1){
-												echo "<b>May ${day}st $year</b> <br>";
+												echo "<b>May ${day}st</b> <br>";
 											} else if ($day==2){
-												echo "<b>May ${day}nd $year</b> <br>";
+												echo "<b>May ${day}nd</b> <br>";
 											} else if ($day==3){
-												echo "<b>May ${day}rd $year</b> <br>";
+												echo "<b>May ${day}rd</b> <br>";
+											} else if ($day==21){
+												echo "<b>May ${day}st</b> <br>";
+											} else if ($day==22){
+												echo "<b>May ${day}nd</b> <br>";
+											} else if ($day==23){
+												echo "<b>May ${day}rd</b> <br>";
 											} else{
-												echo "<b>May ${day}th $year</b> <br>";
+												echo "<b>May ${day}th</b> <br>";
 											}
 											break;
 										case 6:
 											if ($day==1){
-												echo "<b>June ${day}st $year</b> <br>";
+												echo "<b>June ${day}st</b> <br>";
 											} else if ($day==2){
-												echo "<b>June ${day}nd $year</b> <br>";
+												echo "<b>June ${day}nd</b> <br>";
 											} else if ($day==3){
-												echo "<b>June ${day}rd $year</b> <br>";
+												echo "<b>June ${day}rd</b> <br>";
+											} else if ($day==21){
+												echo "<b>June ${day}st</b> <br>";
+											} else if ($day==22){
+												echo "<b>June ${day}nd</b> <br>";
+											} else if ($day==23){
+												echo "<b>June ${day}rd</b> <br>";
 											} else{
-												echo "<b>June ${day}th $year</b> <br>";
+												echo "<b>June ${day}th</b> <br>";
 											}
 											break;
 										case 7:
 											if ($day==1){
-												echo "<b>July ${day}st $year</b> <br>";
+												echo "<b>July ${day}st</b> <br>";
 											} else if ($day==2){
-												echo "<b>July ${day}nd $year</b> <br>";
+												echo "<b>July ${day}nd</b> <br>";
 											} else if ($day==3){
-												echo "<b>July ${day}rd $year</b> <br>";
+												echo "<b>July ${day}rd</b> <br>";
+											} else if ($day==21){
+												echo "<b>July ${day}st</b> <br>";
+											} else if ($day==22){
+												echo "<b>July ${day}nd</b> <br>";
+											} else if ($day==23){
+												echo "<b>July ${day}rd</b> <br>";
 											} else{
-												echo "<b>July ${day}th $year</b> <br>";
+												echo "<b>July ${day}th</b> <br>";
 											}
 											break;	
 										case 8:
 											if ($day==1){
-												echo "<b>August ${day}st $year</b> <br>";
+												echo "<b>August ${day}st</b> <br>";
 											} else if ($day==2){
-												echo "<b>August ${day}nd $year</b> <br>";
+												echo "<b>August ${day}nd</b> <br>";
 											} else if ($day==3){
-												echo "<b>August ${day}rd $year</b> <br>";
+												echo "<b>August ${day}rd</b> <br>";
+											} else if ($day==21){
+												echo "<b>August ${day}st</b> <br>";
+											} else if ($day==22){
+												echo "<b>August ${day}nd</b> <br>";
+											} else if ($day==23){
+												echo "<b>August ${day}rd</b> <br>";
 											} else{
-												echo "<b>August ${day}th $year</b> <br>";
+												echo "<b>August ${day}th</b> <br>";
 											}
 											break;									
 										case 9:
 											if ($day==1){
-												echo "<b>September ${day}st $year</b> <br>";
+												echo "<b>September ${day}st</b> <br>";
 											} else if ($day==2){
-												echo "<b>September ${day}nd $year</b> <br>";
+												echo "<b>September ${day}nd</b> <br>";
 											} else if ($day==3){
-												echo "<b>September ${day}rd $year</b> <br>";
+												echo "<b>September ${day}rd</b> <br>";
+											} else if ($day==21){
+												echo "<b>September ${day}st</b> <br>";
+											} else if ($day==22){
+												echo "<b>September ${day}nd</b> <br>";
+											} else if ($day==23){
+												echo "<b>September ${day}rd</b> <br>";
 											} else{
-												echo "<b>September ${day}th $year</b> <br>";
+												echo "<b>September ${day}th</b> <br>";
 											}
 											break;
 										case 10:
 											if ($day==1){
-												echo "<b>October ${day}st $year</b> <br>";
+												echo "<b>October ${day}st</b> <br>";
 											} else if ($day==2){
-												echo "<b>October ${day}nd $year</b> <br>";
+												echo "<b>October ${day}nd</b> <br>";
 											} else if ($day==3){
-												echo "<b>October ${day}rd $year</b> <br>";
+												echo "<b>October ${day}rd</b> <br>";
+											} else if ($day==21){
+												echo "<b>October ${day}st</b> <br>";
+											} else if ($day==22){
+												echo "<b>October ${day}nd</b> <br>";
+											} else if ($day==23){
+												echo "<b>October ${day}rd</b> <br>";
 											} else{
-												echo "<b>October ${day}th $year</b> <br>";
+												echo "<b>October ${day}th</b> <br>";
 											}
 											break;
 										case 11:
 											if ($day==1){
-												echo "<b>November ${day}st $year</b> <br>";
+												echo "<b>November ${day}st</b> <br>";
 											} else if ($day==2){
-												echo "<b>November ${day}nd $year</b> <br>";
+												echo "<b>November ${day}nd</b> <br>";
 											} else if ($day==3){
-												echo "<b>November ${day}rd $year</b> <br>";
+												echo "<b>November ${day}rd</b> <br>";
+											} else if ($day==21){
+												echo "<b>November ${day}st</b> <br>";
+											} else if ($day==22){
+												echo "<b>November ${day}nd</b> <br>";
+											} else if ($day==23){
+												echo "<b>November ${day}rd</b> <br>";
 											} else{
-												echo "<b>November ${day}th $year</b> <br>";
+												echo "<b>November ${day}th</b> <br>";
 											}
 											break;
 										case 12:
 											if ($day==1){
-												echo "<b>December ${day}st $year</b> <br>";
+												echo "<b>December ${day}st</b> <br>";
 											} else if ($day==2){
-												echo "<b>December ${day}nd $year</b> <br>";
+												echo "<b>December ${day}nd</b> <br>";
 											} else if ($day==3){
-												echo "<b>December ${day}rd $year</b> <br>";
+												echo "<b>December ${day}rd</b> <br>";
+											} else if ($day==21){
+												echo "<b>December ${day}st</b> <br>";
+											} else if ($day==22){
+												echo "<b>December ${day}nd</b> <br>";
+											} else if ($day==23){
+												echo "<b>December ${day}rd</b> <br>";
 											} else{
-												echo "<b>December ${day}th $year</b> <br>";
+												echo "<b>December ${day}th</b> <br>";
 											}
 											break;		
-										}
+									}
 
 										echo ("</p> <p>");
 
@@ -212,56 +336,8 @@
 				?>
 
 
-<br><br><br>
 
 
-
-			<div id="otherformat">
-						
-				<b>Blog Archive:</b>
-				<br>
-				<br>	
-				
-			<?php 	
-				for ($year=date("Y"); $year>=2022; $year--) 
-				{	
-					if (is_dir("../../data/$yea"))
-					{
-						if (!is_dir("$year"))
-						{
-							mkdir("$year", 0777, true);
-							chmod("$year", 0777);
-						}
-						echo "$year <br>";
-						for ($month=12; $month>=1; $month--) 
-						{
-							if (is_dir("../../data/$year/$month"))
-								{
-									
-									$tmplt = file_get_contents("template.php");
-									$newfile = fopen("$year/$month.php","w") or die("Unable to open file!");
-									chmod("$year/$month.php", 0777);
-									fwrite($newfile, $tmplt);
-									fclose($newfile);
-									echo("<button onclick= \"location.href='$month.php'\">May</button>");
-								}
-						}
-						echo("<br>");
-					}
-						
-				}
-				?>
-			</div>
-
-
-
-
-
-
-
-
-
-			<br>
 			</div>
 				
 			
@@ -277,5 +353,32 @@
     		
 	
   	</div>
+
+
+
+	  <script>
+//Get the button
+var mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+
+
+
 </body>
 </html>

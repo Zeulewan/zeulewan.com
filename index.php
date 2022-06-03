@@ -26,10 +26,11 @@
 
 
   	<ul class="header">
-		<li data-tab-target="#home" class="active tab"><font color ="FFFFFF">Blog</font></li>
+	 	<li data-tab-target="#something"    class="active tab"><font color="FFFFFF">Home</font></li>
+		<li data-tab-target="#home" 		class="tab"><font color ="FFFFFF">Blog</font></li>
 		<li data-tab-target="#thoughts"    class="tab"><font color ="FFFFFF">Thoughts</font></li>
 		<li data-tab-target="#links"        class="tab"><font color="FFFFFF">Links</font></li>
-		<li data-tab-target="#something"    class="tab"><font color="FFFFFF">About me</font></li>
+		
   	</ul>
 
 	
@@ -43,12 +44,17 @@
 
 
   	<div class="tab-content">
-    		<div id="home" data-tab-content class="active">
+    		<div id="home" data-tab-content >
 		
-				<font face="Arial" color="#E7F5FE">
-				<h1>My Blog</h1>
-				<h4>This is where I'll post some of the things I do throughout the summer</h4><br>
-			
+				<font face='Arial' color="#E7F5FE">
+				<h1>My Blog!</h1>
+				
+				<h4>This is a place for me to post things I do or anything I think about</h4>
+				
+				<div class="center">
+				<button class="button-10" role="button" onclick="location.href='../../../blogarchive.php'"     id="home"  >   Archive    </button>
+				</div>
+				
 				<?php 
 					for ($year=date("Y"); $year>=2022; $year--) 
 					{
@@ -60,10 +66,10 @@
 								if ($pagecontents!=null)
 								{
 									
-									echo ("<div id='blog'> <p>");
+									echo ("<br><div id='blog'> <p>");
 											
 									
-
+									
 									switch ($month) 
 									{
 										case 1:
@@ -278,7 +284,7 @@
 									jpg("1", "$pagecontents", "$year", "$month", "$day");
 								
 
-									echo ("</p> </div> <br>");
+									echo ("</p> </div> ");
 
 									$post_counter++;
 									if ($post_counter>10){
@@ -310,44 +316,7 @@
 					}
 				?>
 
-
-<br><br><br>
-			<div id="otherformat">
-						
-				<b>Blog Archive:</b>
-				<br>
-				<br>	
-				
-			<?php 	
-				for ($year=date("Y"); $year>=2022; $year--) 
-				{	
-					if (is_dir("blog/data/$year"))
-					{
-						if (!is_dir("blog/archive/$year"))
-						{
-							mkdir("blog/archive/$year", 0777, true);
-							chmod("blog/archive/$year", 0777);
-						}
-						echo "$year <br>";
-						for ($month=12; $month>=1; $month--) 
-						{
-							if (is_dir("blog/data/$year/$month"))
-								{
-									
-									$tmplt = file_get_contents("blog/archive/template.php");
-									$newfile = fopen("blog/archive/$year/$month.php","w") or die("Unable to open file!");
-									chmod("blog/archive/$year/$month.php", 0777);
-									fwrite($newfile, $tmplt);
-									fclose($newfile);
-									echo("<button onclick= \"location.href='blog/archive/$year/$month.php'\">May</button>");
-								}
-						}
-						echo("<br>");
-					}
-						
-				}
-				?>
-			</div>
+			
 </div>
 
 
@@ -355,7 +324,8 @@
 
 
 		<div id="thoughts" data-tab-content>
-			<h1>This is a place to put my thoughts on random things</h1>
+			<h1>Thoughts</h1>
+			<h4>This is where I'll post thoughts I have that I write out in full</h4>
 			<?php 
 
 
@@ -411,7 +381,7 @@
 										$f = fopen("thoughts/data/$year/$month/$day/$bname.txt", 'r');
 										$line1 = fgets($f);
 										fclose($f);
-										echo("<button onclick= \"location.href='thoughts/archive/$year/$month/$day/$bname.php'\">$line1</button>");
+										echo("<button class='button-10' onclick= \"location.href='thoughts/archive/$year/$month/$day/$bname.php'\">$line1</button> ");
 										echo("<br> <br>");
 									}
 								}
@@ -443,7 +413,7 @@
 
 
    		<div id="links" data-tab-content>
- 			<h1>Here are some links to things.</h1>
+ 			<h1>Links</h1>
 			
 			
 			<div id="otherformat">
@@ -453,11 +423,10 @@
 			<br>	
 			<br>		
 			
-			<b>Download my Music (direct download)</b>
+			<b>Download my Music</b>
 				 <br>
 			<a href="media/Zeul.zip" download>
-   			<button type="button">320kbps MP3s</button> 
-			</a> <br>
+   			<button class='button-10' type="button">320kbps MP3s</button></a> <br>
 			<br>
 
 			<b>Youtube Channel:</b> <br>
@@ -465,32 +434,36 @@
 			<br>	
 			<br>		
 
-			<b>LinkedIn:</b> <br>
+			<b>My LinkedIn:</b> <br>
 			<a href="https://www.linkedin.com/in/zeul-mordasiewicz-8133561b9/"><font color="#1187FC">LinkedIn</font></a>
 			<br>	
 			<br>
 
 			<b>My GitHub:</b> <br>
 			<a href="https://github.com/Zeulewan"><font color="#1187FC">GitHub</font></a>
-			<br>	
-			<br>
 			
-			<b>Site I use to compress all my images</b> <br>
-			<a href="https://imagecompressor.com/"><font color="#1187FC">imagecompressor.com</font></a>
-				
+
 					
 
 			</div>
 
 
+
+
+
+			
     		</div>
-    		<div id="something" data-tab-content>	
+    		<div id="something" data-tab-content class="active">	
       			<h1>About me</h1>
 
 			<div id="otherformat">
-     			Hi my name is Zeul (full name Zeulewan), I'm 19, and I thought it would be fun to make a website. This website is fully self hosted 
-			and coded and is available <a href="https://github.com/Zeulewan/zeulewan.com"><font color="#1187FC">here</font></a>. I am an aerospace engineering student at TMU (Toronto Metropolitan University formerly Ryerson).<br><br>
-			<img src="media/portrait.jpg" alt="image not found">
+     			Hi my name is Zeul, and this is my website. 
+				I coded this from scratch <a href="https://github.com/Zeulewan/zeulewan.com"><font color="#1187FC">(available here)</font></a>.
+				and I'm hosting it on a raspberry pi. 
+				I am an aerospace engineering student at TMU (Toronto Metropolitan University formerly Ryerson). I hope to make this
+				website a place to put random interesting things that I do.
+				<br><br>
+			<img src="media/portrait.jpg" style="max-width:600px;width:100%" alt="image not found">
 
 			
 			</div>
