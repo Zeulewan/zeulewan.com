@@ -1,3 +1,0 @@
-I created the thoughts section. It along with the blog archive are generated automatically. 
-The only input I give to the website is the text, pictures and date. I want 
-it to do all the formatting automatically.
